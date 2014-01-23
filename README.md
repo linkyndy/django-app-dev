@@ -57,6 +57,10 @@ The _django-app-dev_ tree looks like this:
 
 ```
 
+### MANIFEST.in
+
+You should include here all non-.py files that are required by your app and must be distributed with it.
+
 ### setup.py
 
 Describes your awesomely-crafted project. You should modify this by giving the right `name` for your app, its current `version`, a short `description` and the `author` name and `author_email` (that's you!).
