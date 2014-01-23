@@ -67,6 +67,18 @@ Describes your awesomely-crafted project. You should modify this by giving the r
 
 Furthermore, any Python package your app relies on should be placed under `DEPENDENCIES` and any links to these packages should be put in `DEPENDENCY_LINKS`. Also, any package required for setting up your app should be put in `setup_requires`.
 
+### tox.ini
+
+[Tox](http://tox.readthedocs.org) configuration file. You should specify here how your tests need to be run, what test dependencies you need and other stuff.
+
+Currently, [py.test](http://pytest.org) is the chosen tool for running the app's tests; [pytest-django](http://pytest-django.readthedocs.org/en/latest/) ties it up to the Django framework.
+
+Notes:
+* Since version 1.5 of PIP, `dependency_links` are ignored by default. To enable them, be sure to include the `--process-dependency-links` flag;
+* The `--pre` flag allows installing pre-release versions of the required packages;
+* A summary of your app's test can be found in `pytest-results.xml` after running a Tox;
+* Modules that need to be tested should be placed in `{posargs:[...]}`.
+
 
 Going further
 -------------
