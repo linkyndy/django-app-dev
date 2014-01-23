@@ -62,6 +62,8 @@ The _django-app-dev_ tree looks like this:
 
 Everything related to testing should be placed under this directory. As of _django-app-dev_'s tox configuration, tests that reside in `app/tests/tests.py` will be run, using the settings in `app/tests/settings.py`.
 
+Custom test urls should be placed under `app/tests/urls.py`. These are automatically included in tests via the tests settings file.
+
 Additional files, such as models, or additional tests can be placed in new files within this directory (but pay attention on how you configure Tox to run your new tests!).
 
 ### MANIFEST.in
