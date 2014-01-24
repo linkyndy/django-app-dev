@@ -52,6 +52,27 @@ The _django-app-dev_ tree looks like this:
 
 ```
 
+### app/admin.py app/models.py app/settings.py app/urls.py app/views.py
+
+Django-specific files; nothing special about them -- just use them as you're used to.
+
+### app/fixtures
+
+Any fixtures needed throughout the app, whether they are initial app data or required for tests, should be put in here.
+
+Note: Initial app data should be put in a fixture called `initial_data`.s
+
+### app/migrations
+
+[South](http://south.readthedocs.org/en/latest/) migrations will reside here.
+
+### app/static
+
+Any static file used throughout the app should be put here in its corresponding directory. The rule you have to bear in mind is that every static file should be placed under [app-name]/[file-type] and you're good to go.
+
+### app/templates
+
+Templates used in your app should be placed here. The same rule as with static files apply, so be sure to check the above paragraph.
 
 ### app/tests/
 
