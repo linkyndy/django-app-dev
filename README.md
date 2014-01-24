@@ -11,49 +11,44 @@ The _django-app-dev_ tree looks like this:
 
 
 ```
+.
 ├── app
-│   ├── admin.py
-│   ├── fixtures
-│   │   └── fixture.json
-│   ├── forms.py
-│   ├── __init__.py
-│   ├── middleware.py
-│   ├── migrations
-│   │   └── __init__.py
-│   ├── models.py
-│   ├── settings.py
-│   ├── static
-│   │   ├── admin
-│   │   │   ├── css
-│   │   │   ├── images
-│   │   │   └── js
-│   │   └── app
-│   │       ├── css
-│   │       ├── images
-│   │       └── js
-│   ├── templates
-│   │   ├── admin
-│   │   │   └── sample_template.html
-│   │   └── app
-│   │       └── sample_template.html
-│   ├── templatetags
-│   │   ├── app_tags.py
-│   │   └── __init__.py
-│   ├── tests
-│   │   ├── __init__.py
-│   │   ├── models.py
-│   │   ├── settings.py
-│   │   ├── tests.py
-│   │   └── urls.py
-│   ├── tests.py
-│   ├── urls.py
-│   ├── views.py
-│   └── wsgi.py
+│   ├── admin.py
+│   ├── fixtures
+│   │   └── fixture.json
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── settings.py
+│   ├── static
+│   │   ├── admin
+│   │   │   ├── css
+│   │   │   ├── images
+│   │   │   └── js
+│   │   └── app
+│   │       ├── css
+│   │       ├── images
+│   │       └── js
+│   ├── templates
+│   │   ├── admin
+│   │   │   └── sample_template.html
+│   │   └── app
+│   │       └── sample_template.html
+│   ├── tests
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── settings.py
+│   │   ├── tests.py
+│   │   └── urls.py
+│   ├── urls.py
+│   └── views.py
 ├── LICENSE
 ├── MANIFEST.in
 ├── README.md
 ├── setup.py
 └── tox.ini
+
 
 ```
 
