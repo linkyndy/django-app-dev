@@ -3,12 +3,44 @@ django-app-dev
 
 Basic Django app structure, development-ready and test-ready, Tox integrated.
 
+Getting started
+---------------
+
+In order to get started with this framework, you need to simply clone this repository:
+
+```
+git clone https://github.com/linkyndy/django-app-dev.git
+```
+
+And create a virtual environment with [Tox](http://tox.readthedocs.org) installed:
+
+```
+mkvirtualenv django-app-dev
+pip install tox
+```
+
+You will then run tests with:
+
+```
+tox
+```
+
+It's that simple! Go ahead, try it out!
+
+
+Dependencies
+------------
+
+Only [Tox](http://tox.readthedocs.org) is required to be installed. The version supported by this app is >=1.5, which is the latest, so `pip install tox` should to the magic. If you want to clearly specify Tox's version, run `pip install 'tox >= 1.5'`.
+
+The other app dependencies are automatically detected and installed via Tox from `setup.py`.
+
+If you need dependencies only for testing, adding them to `tox.ini`'s `deps` should to the work.
 
 Knowing what's in the box
 -------------------------
 
 The _django-app-dev_ tree looks like this:
-
 
 ```
 .
@@ -107,3 +139,9 @@ Notes:
 
 Going further
 -------------
+
+So you've got this basic Django app structure, ready for development and for testing (thanks to the wonderful Tox tool). What's next?
+
+You may find that the structure lacks some files your dev skills desire (such as middleware, templatetags, wsgi and so on). Go ahead and create them! This app structure was intended to be minimal, saving you some time when starting to draft your award-winning app you had in mind. You can add/remove files from this structure to fulfil your dev-guru desire.
+
+You may want to support different versions of PIP or Tox, but you should be aware that PIP has changed a bit from version 1.5, so backwards compatibility is quite hard, if not, impossible to achieve. Bear in mind and read the docs when you'd wish to change something.
