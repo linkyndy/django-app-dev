@@ -6,7 +6,7 @@ Basic Django app structure, development-ready and test-ready, Tox integrated.
 Getting started
 ---------------
 
-In order to get started with this framework, you need to simply clone this repository:
+In order to get started with this framework, you simply need to clone this repository:
 
 ```
 git clone https://github.com/linkyndy/django-app-dev.git
@@ -31,11 +31,11 @@ It's that simple! Go ahead, try it out!
 Dependencies
 ------------
 
-Only [Tox](http://tox.readthedocs.org) is required to be installed. The version supported by this app is >=1.5, which is the latest, so `pip install tox` should to the magic. If you want to clearly specify Tox's version, run `pip install 'tox >= 1.5'`.
+Only [Tox](http://tox.readthedocs.org) is required to be installed. The version supported by this framework is >=1.6, which is the latest, so `pip install tox` should do the magic. If you want to clearly specify Tox's version, run `pip install 'tox >= 1.6'`. This will assure that testing will occur in virtualenvs that use a version of [PIP](http://www.pip-installer.org/en/latest/index.html) higher than 1.5 (which is required by current Tox configuration, see below).
 
 The other app dependencies are automatically detected and installed via Tox from `setup.py`.
 
-If you need dependencies only for testing, adding them to `tox.ini`'s `deps` should to the work.
+If you need dependencies only for testing, adding them to `tox.ini`'s `deps` should do the work.
 
 Knowing what's in the box
 -------------------------
@@ -92,7 +92,7 @@ Django-specific files; nothing special about them -- just use them as you're use
 
 Any fixtures needed throughout the app, whether they are initial app data or required for tests, should be put in here.
 
-Note: Initial app data should be put in a fixture called `initial_data`.s
+Note: Initial app data should be put in a fixture called `initial_data`.
 
 ### app/migrations
 
@@ -131,7 +131,7 @@ Furthermore, any Python package your app relies on should be placed under `DEPEN
 Currently, [py.test](http://pytest.org) is the chosen tool for running the app's tests; [pytest-django](http://pytest-django.readthedocs.org/en/latest/) ties it up to the Django framework.
 
 Notes:
-* Since version 1.5 of PIP, `dependency_links` are ignored by default. To enable them, be sure to include the `--process-dependency-links` flag;
+* Since version 1.5 of [PIP](http://www.pip-installer.org/en/latest/index.html), `dependency_links` are ignored by default. To enable them, be sure to include the `--process-dependency-links` flag;
 * The `--pre` flag allows installing pre-release versions of the required packages;
 * A summary of your app's test can be found in `pytest-results.xml` after running a Tox;
 * Modules that need to be tested should be placed in `{posargs:[...]}`.
@@ -144,4 +144,33 @@ So you've got this basic Django app structure, ready for development and for tes
 
 You may find that the structure lacks some files your dev skills desire (such as middleware, templatetags, wsgi and so on). Go ahead and create them! This app structure was intended to be minimal, saving you some time when starting to draft your award-winning app you had in mind. You can add/remove files from this structure to fulfil your dev-guru desire.
 
-You may want to support different versions of PIP or Tox, but you should be aware that PIP has changed a bit from version 1.5, so backwards compatibility is quite hard, if not, impossible to achieve. Bear in mind and read the docs when you'd wish to change something.
+You may want to support different versions of PIP or Tox, but you should be aware that PIP has changed a bit from version 1.5, so backwards compatibility is quite hard, if not, impossible to achieve. Bear this in mind and read the docs when you'd wish to change something.
+
+Contributing
+------------
+
+Just fork this repo, do your magic and send back a pull request!
+
+License
+-------
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Andrei Horak
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
