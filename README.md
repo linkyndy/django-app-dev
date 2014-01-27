@@ -9,7 +9,7 @@ Getting started
 In order to get started with this framework, you simply need to clone this repository:
 
 ```
-git clone https://github.com/linkyndy/django-app-dev.git
+git clone <repo-url>
 ```
 
 And create a virtual environment with [Tox](http://tox.readthedocs.org) installed:
