@@ -26,7 +26,6 @@ setup(
     author_email='linkyndy@gmail.com',
     packages=find_packages(),
     include_package_data=True,
-    license='MIT License',
     install_requires=DEPENDENCIES,
     dependency_links=DEPENDENCY_LINKS,
     setup_requires=[],
